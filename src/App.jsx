@@ -1,17 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Overview from './pages/Overview';
+import Projects from './pages/Projects';
+import Clients from './pages/Clients';
+import Invoices from './pages/Invoices';
+import Tasks from './pages/Tasks';
+import Analytics from './pages/Analytics';
+import Profile from './pages/Profile';
 
-export default function App() {
+function App() {
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
-      <h1 className="text-3xl font-bold text-blue-600">Hello Tailwind!</h1>
-      <p className="mt-4 text-gray-700">This is a test of Tailwind CSS</p>
-      <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        Test Button
-      </button>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Overview />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="clients" element={<Clients />} />
+          <Route path="invoices" element={<Invoices />} />
+          <Route path="tasks" element={<Tasks />} />
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
+export default App;
