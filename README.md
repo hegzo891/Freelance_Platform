@@ -2,8 +2,6 @@
 
 A comprehensive, modern admin dashboard designed specifically for freelancers to manage their business operations efficiently. Built with React, TypeScript, and Tailwind CSS, this dashboard provides a complete solution for project management, client relationships, invoicing, and business analytics.
 
-![Dashboard Preview](https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop)
-
 ## 🚀 Features
 
 ### 📊 **Dashboard Overview**
